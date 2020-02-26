@@ -1,0 +1,17 @@
+[Unit]
+Description=Apache Kafka Connect - distributed
+Documentation=http://docs.confluent.io/
+After=network.target confluent-server.target
+
+[Service]
+Type=simple
+User=cp-kafka-connect
+Group=confluent
+Environment="LOG_DIR=/home/corshine/kafka.debezium/data01/confluent_data/log/kafka-conn-svc"
+Environment="KAFKA_LOG4J_OPTS=-Dlog4j.configuration=file:/home/corshine/kafka.debezium/confluent-5.4.0/etc/kafka/connect-log4j.properties"
+ExecStart=/home/corshine/kafka.debezium/confluent-5.4.0/bin/connect-distributed /home/corshine/kafka.debezium/confluent-etc/conn/connect-avro-distributed.properties
+TimeoutStopSec=180
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

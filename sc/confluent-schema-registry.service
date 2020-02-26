@@ -1,0 +1,16 @@
+[Unit]
+Description=RESTful Avro schema registry for Apache Kafka
+Documentation=http://docs.confluent.io/
+After=network.target confluent-kafka.target
+
+[Service]
+Type=simple
+User=cp-schema-registry
+Group=confluent
+Environment="LOG_DIR=/home/corshine/kafka.debezium/data01/confluent_data/log/kafka-schema-svc"
+ExecStart=/home/corshine/kafka.debezium/confluent-5.4.0/bin/schema-registry-start /home/corshine/kafka.debezium/confluent-etc/sc/schema-registry.properties
+TimeoutStopSec=180
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

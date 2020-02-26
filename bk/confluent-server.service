@@ -1,0 +1,17 @@
+[Unit]
+Description=Apache Kafka - broker
+Documentation=http://docs.confluent.io/
+After=network.target confluent-zookeeper.target
+
+[Service]
+Type=simple
+User=cp-kafka
+Group=confluent
+Environment="LOG_DIR=/home/corshine/kafka.debezium/data01/confluent_data/log/kafka-bk-svc"
+ExecStart=/home/corshine/kafka.debezium/confluent-5.4.0/bin/kafka-server-start /home/corshine/kafka.debezium/confluent-etc/bk/server.properties
+LimitNOFILE=1000000
+TimeoutStopSec=180
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
