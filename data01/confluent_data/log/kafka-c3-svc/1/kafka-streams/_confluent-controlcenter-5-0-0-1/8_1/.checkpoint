@@ -1,0 +1,10 @@
+0
+8
+_confluent-controlcenter-5-0-0-1-MonitoringMessageAggregatorWindows-THREE_HOURS-changelog 1 0
+_confluent-controlcenter-5-0-0-1-TriggerActionsStore-changelog 1 0
+_confluent-controlcenter-5-0-0-1-Group-ONE_MINUTE-changelog 1 0
+_confluent-controlcenter-5-0-0-1-aggregatedTopicPartitionTableWindows-THREE_HOURS-changelog 1 0
+_confluent-controlcenter-5-0-0-1-aggregatedTopicPartitionTableWindows-ONE_MINUTE-changelog 1 0
+_confluent-controlcenter-5-0-0-1-AlertHistoryStore-changelog 1 0
+_confluent-controlcenter-5-0-0-1-Group-THREE_HOURS-changelog 1 0
+_confluent-controlcenter-5-0-0-1-TriggerEventsStore-changelog 1 0
